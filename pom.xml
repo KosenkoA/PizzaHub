@@ -7,6 +7,47 @@
     <groupId>com.kosenko</groupId>
     <artifactId>PizzaHub</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.0.0.RELEASE</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!--Hibernate part-->
+        <!--Нужна для работы аннотаций "Entity" в Entity классах -->
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>5.0.12.Final</version>
+        </dependency>
+        <!--Нужна для работы аннотаций "Id" в Entity классах -->
+        <dependency>
+            <groupId>org.hibernate.common</groupId>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <version>5.0.1.Final</version>
+        </dependency>
+
+        <!--Нужна для работы аннотаций "Size", "Max" и "Min" в Entity классах -->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>2.0.1.Final</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
