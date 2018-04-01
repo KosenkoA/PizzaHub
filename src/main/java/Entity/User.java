@@ -1,6 +1,8 @@
 package Entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "user")
@@ -9,6 +11,11 @@ public class User {
     @SequenceGenerator(name = "user-sequence_generator", sequenceName = "user_sequence")
     @GeneratedValue(generator = "user-sequence_generator", strategy = GenerationType.IDENTITY)
     private long id;
+    @Email
+    @Size(min = 5, max = 50)
+    private String email;
+    @Size(min = 5, max = 100)
+    private String password;
     private String firstName;
     private String secondName;
 
