@@ -17,4 +17,5 @@ public class Role implements Serializable {
     public Role(@Size(min = 2, max = 50) String name) {
         this.name = name;
     }
+
 }
