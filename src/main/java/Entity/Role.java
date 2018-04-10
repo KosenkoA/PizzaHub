@@ -4,7 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
-@Table(name = "role")
+@Table(name = "role", schema = "ph")
 public class Role implements Serializable {
     @Id
     @SequenceGenerator(name = "role-sequence_generator", sequenceName = "role_sequence")
@@ -18,4 +18,19 @@ public class Role implements Serializable {
         this.name = name;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

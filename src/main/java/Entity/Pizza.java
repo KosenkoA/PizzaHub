@@ -6,7 +6,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
 
 @Entity
-@Table(name = "pizza")
+@Table(name = "pizza", schema = "ph")
 public class Pizza {
     @Id
     @SequenceGenerator(name = "user-sequence_generator", sequenceName = "user_sequence")

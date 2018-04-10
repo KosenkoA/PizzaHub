@@ -3,7 +3,7 @@ package Entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "ordered_dish")
+@Table(name = "ordered_pizza", schema = "ph")
 public class OrderedPizza {
     @Id
     @SequenceGenerator(name = "orderdish-sequence_generator", sequenceName = "orderdish_sequence")

@@ -9,4 +9,7 @@
         <sqlFile path="database/mysql/sql/initDB.sql"/>
     </changeSet>
 
+    <changeSet id="2" author="kosenko" runAlways="true">
+        <sqlFile path="database/mysql/sql/createUserRole.sql"/>
+    </changeSet>
 </databaseChangeLog>
