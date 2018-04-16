@@ -1,4 +1,4 @@
-package Entity;
+package kosenko.Entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;

@@ -1,4 +1,4 @@
-package Entity;
+package kosenko.Entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;

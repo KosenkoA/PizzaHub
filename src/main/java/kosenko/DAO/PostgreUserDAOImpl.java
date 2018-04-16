@@ -1,4 +1,4 @@
-package DAO;
+package kosenko.DAO;
 
 /*
 public class PostgreUserDAOImpl implements UserDAO{

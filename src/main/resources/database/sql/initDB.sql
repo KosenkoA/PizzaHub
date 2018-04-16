@@ -8,10 +8,10 @@ CREATE TABLE ph.role (
   name VARCHAR(50)
 );
 
-DROP SEQUENCE IF EXISTS status_sequance CASCADE;
-CREATE SEQUENCE status_sequance;
+DROP SEQUENCE IF EXISTS status_sequence CASCADE;
+CREATE SEQUENCE status_sequence;
 CREATE TABLE ph.status (
-  id   BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('status_sequance'),
+  id   BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('status_sequence'),
   name VARCHAR(50)
 );
 
@@ -42,7 +42,7 @@ CREATE TABLE ph.order
 
 DROP SEQUENCE IF EXISTS pizza_sequence CASCADE;
 CREATE SEQUENCE pizza_sequence;
-CREATE TABLE ph.dish
+CREATE TABLE ph.pizza
 (
   id            BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('pizza_sequence'),
   name          VARCHAR(50),
@@ -56,14 +56,14 @@ CREATE TABLE ph.dish
 
 DROP SEQUENCE IF EXISTS orderpizza_sequence CASCADE;
 CREATE SEQUENCE orderpizza_sequence;
-CREATE TABLE ph.orderdish
+CREATE TABLE ph.orderpizza
 (
   id        BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('orderpizza_sequence'),
-  dish_id   BIGINT,
+  pizza_id  BIGINT,
   status_id BIGINT,
   order_id  BIGINT,
-  CONSTRAINT "dish_id" FOREIGN KEY ("dish_id")
-  REFERENCES ph.dish (id),
+  CONSTRAINT "pizza_id" FOREIGN KEY ("pizza_id")
+  REFERENCES ph.pizza (id),
   CONSTRAINT "status_id" FOREIGN KEY ("status_id")
   REFERENCES ph.status (id),
   CONSTRAINT "order_id" FOREIGN KEY ("order_id")

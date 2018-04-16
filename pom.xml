@@ -44,20 +44,20 @@
         </dependency>
 
         <!--Hibernate part-->
-        <!--Нужна для работы аннотаций "Entity" в Entity классах -->
+        <!--Нужна для работы аннотаций "kosenko.Entity" в kosenko.Entity классах -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.0.12.Final</version>
         </dependency>
-        <!--Нужна для работы аннотаций "Id" в Entity классах -->
+        <!--Нужна для работы аннотаций "Id" в kosenko.Entity классах -->
         <dependency>
             <groupId>org.hibernate.common</groupId>
             <artifactId>hibernate-commons-annotations</artifactId>
             <version>5.0.1.Final</version>
         </dependency>
 
-        <!--Нужна для работы аннотаций "Size", "Max" и "Min" в Entity классах -->
+        <!--Нужна для работы аннотаций "Size", "Max" и "Min" в kosenko.Entity классах -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>

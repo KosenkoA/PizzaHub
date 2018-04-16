@@ -1,6 +1,6 @@
-package Repository;
+package kosenko.Repository;
 
-import Entity.User;
+import kosenko.Entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

@@ -1,6 +1,6 @@
-package DAO;
+package kosenko.DAO;
 
-import Entity.User;
+import kosenko.Entity.User;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
