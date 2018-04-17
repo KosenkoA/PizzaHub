@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
+@Entity
 @Table(name = "role", schema = "ph")
 public class Role implements Serializable {
     @Id

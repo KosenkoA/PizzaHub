@@ -6,14 +6,14 @@
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
     <changeSet id="1" author="kosenko" runAlways="true">
-        <sqlFile path="database/mysql/sql/initDB.sql"/>
+        <sqlFile path="database/sql/initDB.sql"/>
     </changeSet>
 
     <changeSet id="2" author="kosenko" runAlways="true">
-        <sqlFile path="database/mysql/sql/createUserRole.sql"/>
+        <sqlFile path="database/sql/createUserRole.sql"/>
     </changeSet>
 
     <changeSet id="3" author="kosenko" runAlways="true">
-        <sqlFile path="database/mysql/sql/populateDB.sql"/>
+        <sqlFile path="database/sql/populateDB.sql"/>
     </changeSet>
 </databaseChangeLog>

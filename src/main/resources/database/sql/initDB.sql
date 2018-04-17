@@ -34,7 +34,7 @@ CREATE TABLE ph.order
 (
   id      BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('order_sequence'),
   time    TIMESTAMP WITHOUT TIME ZONE,
-  close   BOOLEAN,
+  closed  BOOLEAN,
   user_id BIGINT,
   CONSTRAINT "user_id" FOREIGN KEY ("user_id")
   REFERENCES ph.user (id)
@@ -51,7 +51,7 @@ CREATE TABLE ph.pizza
   calories      INT,
   preparingtime VARCHAR(50),
   price         INT,
-  avalibility   BOOLEAN
+  availability  BOOLEAN
 );
 
 DROP SEQUENCE IF EXISTS orderpizza_sequence CASCADE;

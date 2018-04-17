@@ -32,7 +32,7 @@ public class Order {
 
     public Order(@Past Timestamp time, User user, List<OrderedPizza> orderedPizzas) {
         this.time = time;
-        this.user = user;
+        user = user;
         this.orderedPizzas = orderedPizzas;
     }
 
@@ -57,6 +57,7 @@ public class Order {
     }
 
     public void setUser(User user) {
+        this.user = user;
         this.user = user;
     }
 

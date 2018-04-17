@@ -26,14 +26,14 @@ public class Pizza {
     private int calories;
 
     @Min(0)
-    private int preparingtime;
+    private String preparingtime;
 
     private boolean availability;
 
     public Pizza() {
     }
 
-    public Pizza(@Size(min = 3, max = 500) String name, @Size(min = 3, max = 500) String description, int weight, @Max(5000) @Min(0) int calories, @Min(0) int preparingtime, boolean availability) {
+    public Pizza(@Size(min = 3, max = 500) String name, @Size(min = 3, max = 500) String description, int weight, @Max(5000) @Min(0) int calories, @Min(0) String preparingtime, boolean availability) {
         this.name = name;
         Description = description;
         this.weight = weight;
@@ -82,11 +82,11 @@ public class Pizza {
         this.calories = calories;
     }
 
-    public int getPreparingtime() {
+    public String getPreparingtime() {
         return preparingtime;
     }
 
-    public void setPreparingtime(int preparingtime) {
+    public void setPreparingtime(String preparingtime) {
         this.preparingtime = preparingtime;
     }
 
