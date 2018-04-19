@@ -8,9 +8,9 @@ import java.util.List;
 
 @Repository
 public interface PizzaRepository extends JpaRepository<Pizza, Long> {
+    List<Pizza> findAll();
+
     List<Pizza> findAllByAvailability(Boolean availability);
 
     List<Pizza> findAllByAvailabilityAndName(Boolean availability, String name);
-
-    List<Pizza> findAll();
 }
