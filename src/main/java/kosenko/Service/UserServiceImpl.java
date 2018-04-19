@@ -30,13 +30,11 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public Optional<List<User>> findAll() {
-        Optional<List<User>> usersToReturn = null;
-        Optional<List<User>> userOptional = Optional.of(userRepository.findAll());
+    public List<User> findAll() {
+        List<User> usersToReturn;
+        List<User> userOptional = Optional.ofNullable(userRepository.findAll()).orElse(null);
 
-        if (userOptional.isPresent()) {
-            usersToReturn = Optional.of(userRepository.findAll());
-        }
+        usersToReturn = userOptional;
 
         return usersToReturn;
     }
@@ -48,37 +46,23 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> findById(long id) {
-        Optional<User> userToReturn = null;
-        Optional<User> userOptional = userRepository.findById(id);
+        Optional<User> userToReturn;
+        Optional<User> userOptional = Optional.ofNullable(userRepository.findById(id)).orElse(null);
 
-        if (userOptional.isPresent()) {
-            userToReturn = userRepository.findById(id);
-        }
+        userToReturn = userOptional;
 
         return userToReturn;
     }
 
     @Override
-    public Optional<User> findByEmail(String email) {
-        Optional<User> userToReturn = null;
-        Optional<User> userOptional = Optional.ofNullable(userRepository.findByEmail(email));
+    public User findByEmail(String email) {
+        User userToReturn;
+        User userOptional = Optional.ofNullable(userRepository.findByEmail(email)).orElse(null);
 
-        if (userOptional.isPresent()) {
-            userToReturn = Optional.ofNullable(userRepository.findByEmail(email));
-        }
+        userToReturn = userOptional;
 
         return userToReturn;
     }
 
-    @Override
-    public List<User> findAllUser(Integer pageNumber) {
-        List<User> usersToReturn = null;
-        Optional<List<User>> userOptional = Optional.of(userRepository.findAll());
 
-        if (userOptional.isPresent()) {
-            usersToReturn = userRepository.findAll();
-        }
-
-        return usersToReturn;
-    }
 }
