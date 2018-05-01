@@ -30,9 +30,10 @@ public class Order {
     public Order() {
     }
 
-    public Order(@Past Timestamp time, User user, List<OrderedPizza> orderedPizzas) {
+    public Order(@Past Timestamp time, User user, boolean closed, List<OrderedPizza> orderedPizzas) {
         this.time = time;
-        user = user;
+        this.user = user;
+        this.closed = closed;
         this.orderedPizzas = orderedPizzas;
     }
 

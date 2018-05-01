@@ -10,6 +10,6 @@ CREATE TABLE ph.userrole
 );
 
 ALTER TABLE ph.userrole
-  ADD CONSTRAINT user_id_const FOREIGN KEY (user_id) REFERENCES ph."user" (id) MATCH FULL;
+  ADD CONSTRAINT user_id_const FOREIGN KEY (user_id) REFERENCES ph.user (id) MATCH FULL;
 ALTER TABLE ph.userrole
-  ADD CONSTRAINT role_id_const FOREIGN KEY (role_id) REFERENCES ph."role" (id) MATCH FULL;
+  ADD CONSTRAINT role_id_const FOREIGN KEY (role_id) REFERENCES ph.role (id) MATCH FULL;

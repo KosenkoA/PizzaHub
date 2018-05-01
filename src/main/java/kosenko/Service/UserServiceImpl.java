@@ -24,17 +24,14 @@ public class UserServiceImpl implements UserService {
     public void delete(long id) {
         Optional<User> userOptional = userRepository.findById(id);
 
-        if (userOptional.isPresent()) {
-            userRepository.deleteById(id);
-        }
+        userOptional.ifPresent(user -> userRepository.deleteById(id));
     }
 
     @Override
     public List<User> findAll() {
         List<User> usersToReturn;
-        List<User> userOptional = Optional.ofNullable(userRepository.findAll()).orElse(null);
 
-        usersToReturn = userOptional;
+        usersToReturn = Optional.ofNullable(userRepository.findAll()).orElse(null);
 
         return usersToReturn;
     }
@@ -47,9 +44,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public Optional<User> findById(long id) {
         Optional<User> userToReturn;
-        Optional<User> userOptional = Optional.ofNullable(userRepository.findById(id)).orElse(null);
 
-        userToReturn = userOptional;
+        userToReturn = Optional.ofNullable(userRepository.findById(id)).orElse(null);
 
         return userToReturn;
     }
@@ -57,9 +53,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByEmail(String email) {
         User userToReturn;
-        User userOptional = Optional.ofNullable(userRepository.findByEmail(email)).orElse(null);
 
-        userToReturn = userOptional;
+        userToReturn = Optional.ofNullable(userRepository.findByEmail(email)).orElse(null);
 
         return userToReturn;
     }
