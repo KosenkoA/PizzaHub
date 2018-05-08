@@ -1,8 +1,5 @@
 package kosenko.Entity;
 
-import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
@@ -11,7 +8,7 @@ import java.util.*;
 
 @Entity
 @Table(name = "user", schema = "ph")
-public class User implements UserDetails {
+public class User {
     @Id
     @SequenceGenerator(name = "user-sequence_generator", sequenceName = "user_sequence")
     @GeneratedValue(generator = "user-sequence_generator", strategy = GenerationType.IDENTITY)
@@ -58,39 +55,6 @@ public class User implements UserDetails {
         this.email = email;
     }
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        List<GrantedAuthority> roleList = new ArrayList<>();
-        for (Role role : roles) {
-            roleList.add(new SimpleGrantedAuthority(role.getName()));
-        }
-        return roleList;
-    }
-
-    @Override
-    public String getUsername() {
-        return null;
-    }
-
-    @Override
-    public boolean isAccountNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isAccountNonLocked() {
-        return false;
-    }
-
-    @Override
-    public boolean isCredentialsNonExpired() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled() {
-        return true;
-    }
 
     public String getPassword() {
         return password;
