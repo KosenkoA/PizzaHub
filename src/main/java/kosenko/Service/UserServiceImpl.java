@@ -3,12 +3,14 @@ package kosenko.Service;
 import kosenko.Entity.User;
 import kosenko.Repository.UserRepository;
 import kosenko.Service.interfaces.UserService;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 @Transactional
 public class UserServiceImpl implements UserService {
 

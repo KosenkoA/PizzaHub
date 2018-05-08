@@ -3,12 +3,15 @@ package kosenko.Service;
 import kosenko.Entity.Pizza;
 import kosenko.Repository.PizzaRepository;
 import kosenko.Service.interfaces.PizzaService;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
+@Service
 public class PizzaServiceImpl implements PizzaService {
     @Resource
     private PizzaRepository pizzaRepository;

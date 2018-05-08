@@ -3,11 +3,15 @@ package kosenko.Service;
 import kosenko.Entity.Role;
 import kosenko.Repository.RoleRepository;
 import kosenko.Service.interfaces.RoleService;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Optional;
 
+@Transactional
+@Service
 public class RoleServiceImpl implements RoleService {
     @Resource
     private RoleRepository roleRepository;

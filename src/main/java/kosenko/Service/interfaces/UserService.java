@@ -1,9 +1,11 @@
 package kosenko.Service.interfaces;
 
 import kosenko.Entity.User;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Optional;
+
 
 public interface UserService {
     void create(User user);
