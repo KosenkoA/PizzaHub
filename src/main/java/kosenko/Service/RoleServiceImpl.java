@@ -24,7 +24,7 @@ public class RoleServiceImpl implements RoleService {
     @Override
     public Optional<Role> delete(long id) {
         Optional<Role> deletedRole = roleRepository.findById(id);
-        roleRepository.delete(deletedRole);
+        roleRepository.deleteById(id);
         return deletedRole;
     }
 

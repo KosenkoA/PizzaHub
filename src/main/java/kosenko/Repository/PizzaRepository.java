@@ -15,5 +15,5 @@ public interface PizzaRepository extends JpaRepository<Pizza, Long> {
 
     List<Pizza> findAllByAvailabilityAndName(Boolean availability, String name);
 
-    Optional<Pizza> delete(Optional<Pizza> deletedPizza);
+    Optional<Pizza> deleteById(long id);
 }

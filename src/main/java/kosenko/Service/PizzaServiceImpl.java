@@ -36,7 +36,7 @@ public class PizzaServiceImpl implements PizzaService {
     @Override
     public Optional<Pizza> delete(long id) {
         Optional<Pizza> deletedPizza = pizzaRepository.findById(id);
-        pizzaRepository.delete(deletedPizza);
+        pizzaRepository.deleteById(id);
         return deletedPizza;
     }
 
