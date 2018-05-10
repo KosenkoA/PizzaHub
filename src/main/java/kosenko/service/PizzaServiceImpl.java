@@ -1,8 +1,8 @@
-package kosenko.Service;
+package kosenko.service;
 
-import kosenko.Entity.Pizza;
-import kosenko.Repository.PizzaRepository;
-import kosenko.Service.interfaces.PizzaService;
+import kosenko.entity.Pizza;
+import kosenko.repository.PizzaRepository;
+import kosenko.service.interfaces.PizzaService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

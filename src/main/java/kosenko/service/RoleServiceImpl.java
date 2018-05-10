@@ -1,8 +1,8 @@
-package kosenko.Service;
+package kosenko.service;
 
-import kosenko.Entity.Role;
-import kosenko.Repository.RoleRepository;
-import kosenko.Service.interfaces.RoleService;
+import kosenko.entity.Role;
+import kosenko.repository.RoleRepository;
+import kosenko.service.interfaces.RoleService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

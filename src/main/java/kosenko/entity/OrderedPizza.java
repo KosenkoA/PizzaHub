@@ -1,4 +1,4 @@
-package kosenko.Entity;
+package kosenko.entity;
 
 import javax.persistence.*;
 

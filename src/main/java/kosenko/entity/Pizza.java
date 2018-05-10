@@ -1,4 +1,4 @@
-package kosenko.Entity;
+package kosenko.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Max;
@@ -17,7 +17,7 @@ public class Pizza {
     private String name;
 
     @Size(min = 3, max = 500)
-    private String Description;
+    private String description;
 
     private int weight;
 
@@ -35,7 +35,7 @@ public class Pizza {
 
     public Pizza(@Size(min = 3, max = 500) String name, @Size(min = 3, max = 500) String description, int weight, @Max(5000) @Min(0) int calories, @Min(0) String preparingtime, boolean availability) {
         this.name = name;
-        Description = description;
+        this.description = description;
         this.weight = weight;
         this.calories = calories;
         this.preparingtime = preparingtime;
@@ -59,11 +59,11 @@ public class Pizza {
     }
 
     public String getDescription() {
-        return Description;
+        return description;
     }
 
     public void setDescription(String description) {
-        Description = description;
+        this.description = description;
     }
 
     public int getWeight() {

@@ -1,7 +1,6 @@
-package kosenko.Service.interfaces;
+package kosenko.service.interfaces;
 
-import kosenko.Entity.User;
-import org.springframework.stereotype.Component;
+import kosenko.entity.User;
 
 import java.util.List;
 import java.util.Optional;

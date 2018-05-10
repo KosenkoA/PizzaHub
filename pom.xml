@@ -7,6 +7,7 @@
     <groupId>com.kosenko</groupId>
     <artifactId>PizzaHub</artifactId>
     <version>1.0-SNAPSHOT</version>
+<!---->
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -21,10 +22,6 @@
             <version>2.0.0.RELEASE</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -50,20 +47,20 @@
         </dependency>
 
         <!--Hibernate part-->
-        <!--Нужна для работы аннотаций "kosenko.Entity" в kosenko.Entity классах -->
+        <!--Нужна для работы аннотаций "kosenko.entity" в kosenko.entity классах -->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.0.12.Final</version>
         </dependency>
-        <!--Нужна для работы аннотаций "Id" в kosenko.Entity классах -->
+        <!--Нужна для работы аннотаций "Id" в kosenko.entity классах -->
         <dependency>
             <groupId>org.hibernate.common</groupId>
             <artifactId>hibernate-commons-annotations</artifactId>
             <version>5.0.1.Final</version>
         </dependency>
 
-        <!--Нужна для работы аннотаций "Size", "Max" и "Min" в kosenko.Entity классах -->
+        <!--Нужна для работы аннотаций "Size", "Max" и "Min" в kosenko.entity классах -->
         <dependency>
             <groupId>javax.validation</groupId>
             <artifactId>validation-api</artifactId>
@@ -76,10 +73,47 @@
             <artifactId>liquibase-core</artifactId>
         </dependency>
 
+        <!--WEB-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+<!--
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap-datepicker</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>RELEASE</version>
+        </dependency>
+-->
+        <!--JSTl support for JSP files-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+        </dependency>
+
+        <!--IDK-->
+
+        <!--To enable support for JSPs, we would need to add a dependency on tomcat-embed-jasper-->
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-jasper</artifactId>
+        </dependency>
+
+
     </dependencies>
 
     <properties>
-        <java.version>1.8</java.version>
+    <java.version>1.8</java.version>
     </properties>
 
     <build>
@@ -105,5 +139,43 @@
             </plugin>
         </plugins>
     </build>
+
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
 </project>

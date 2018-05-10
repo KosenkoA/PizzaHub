@@ -1,8 +1,8 @@
-package kosenko.Service;
+package kosenko.service;
 
-import kosenko.Entity.User;
-import kosenko.Repository.UserRepository;
-import kosenko.Service.interfaces.UserService;
+import kosenko.entity.User;
+import kosenko.repository.UserRepository;
+import kosenko.service.interfaces.UserService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

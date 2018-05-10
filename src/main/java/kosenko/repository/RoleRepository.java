@@ -1,7 +1,6 @@
-package kosenko.Repository;
+package kosenko.repository;
 
-import kosenko.Entity.Pizza;
-import kosenko.Entity.Role;
+import kosenko.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

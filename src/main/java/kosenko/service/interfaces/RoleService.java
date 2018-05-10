@@ -1,7 +1,6 @@
-package kosenko.Service.interfaces;
+package kosenko.service.interfaces;
 
-import kosenko.Entity.Role;
-import org.springframework.stereotype.Component;
+import kosenko.entity.Role;
 
 import java.util.List;
 import java.util.Optional;

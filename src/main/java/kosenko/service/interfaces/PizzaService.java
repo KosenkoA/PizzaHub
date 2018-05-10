@@ -1,7 +1,6 @@
-package kosenko.Service.interfaces;
+package kosenko.service.interfaces;
 
-import kosenko.Entity.Pizza;
-import org.springframework.stereotype.Component;
+import kosenko.entity.Pizza;
 
 import java.util.List;
 import java.util.Optional;
