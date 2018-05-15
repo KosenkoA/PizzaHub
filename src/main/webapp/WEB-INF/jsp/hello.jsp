@@ -7,6 +7,7 @@
             <th>name</th>
             <th>description</th>
         </tr>
+        <table border="1">
         <c:forEach items="${pizzas}" var="pizza">
             <tr>
                 <td>${pizza.id}</td>
@@ -14,5 +15,6 @@
                 <td>${pizza.description}</td>
             </tr>
         </c:forEach>
+        </table>
     </table>
 </div>

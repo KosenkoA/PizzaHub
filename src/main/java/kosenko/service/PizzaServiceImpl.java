@@ -28,6 +28,10 @@ public class PizzaServiceImpl implements PizzaService {
         return pizzaRepository.findById(id);
     }
 
+    public Optional<Pizza> findByAvailableAndId(long id) {
+        return findById(id).filter(p->p.isAvailability()==true);
+    }
+
     @Override
     public List<Pizza> findByAvailableAndNameContaining(String name) {
         return pizzaRepository.findAllByAvailabilityAndName(true, name);
