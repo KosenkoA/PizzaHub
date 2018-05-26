@@ -16,3 +16,6 @@ VALUES ('Cheese Pizza', 'Classic cheese pizza', 123, 123, 123, 123, TRUE);
 INSERT INTO ph.pizza (name, description, weight, calories, preparingtime, price, availability) VALUES
   ('New York Special Pizza', 'Pepperoni, sausage, meatballs, green peppers, mushrooms, red onions.', 123, 123, 123, 123,
    TRUE);
+INSERT INTO ph.pizza (name, description, weight, calories, preparingtime, price, availability) VALUES
+  ('New York Special Pizza 2', 'Pepperoni, sausage, meatballs, green peppers, mushrooms, red onions and some other stuff.', 123, 123, 123, 123,
+   TRUE);
