@@ -7,7 +7,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name = "pizza", schema = "ph")
-public class Pizza {
+public class Pizza implements Serializable {
     @Id
     @SequenceGenerator(name = "user-sequence_generator", sequenceName = "user_sequence")
     @GeneratedValue(generator = "user-sequence_generator", strategy = GenerationType.IDENTITY)

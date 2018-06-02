@@ -2,12 +2,13 @@ package kosenko.entity;
 
 import javax.persistence.*;
 import javax.validation.constraints.Past;
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.util.List;
 
 @Entity
 @Table(name = "order", schema = "ph")
-public class Order {
+public class Order implements Serializable {
     @Id
     @SequenceGenerator(name = "order-sequence_generator", sequenceName = "order_sequence")
     @GeneratedValue(generator = "order-sequence_generator", strategy = GenerationType.IDENTITY)

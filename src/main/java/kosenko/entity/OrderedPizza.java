@@ -4,7 +4,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "orderpizza", schema = "ph")
-public class OrderedPizza {
+public class OrderedPizza implements Serializable {
     @Id
     @SequenceGenerator(name = "orderpizza-sequence_generator", sequenceName = "orderpizza_sequence")
     @GeneratedValue(generator = "orderpizza-sequence_generator", strategy = GenerationType.IDENTITY)

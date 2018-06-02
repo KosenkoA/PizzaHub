@@ -4,11 +4,12 @@ package kosenko.entity;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 import java.util.*;
 
 @Entity
 @Table(name = "user", schema = "ph")
-public class User {
+public class User implements Serializable {
     @Id
     @SequenceGenerator(name = "user-sequence_generator", sequenceName = "user_sequence")
     @GeneratedValue(generator = "user-sequence_generator", strategy = GenerationType.IDENTITY)
