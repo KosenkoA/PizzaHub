@@ -4,6 +4,7 @@ import javax.persistence.*;
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.Size;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "pizza", schema = "ph")
@@ -29,6 +30,16 @@ public class Pizza implements Serializable {
     private String preparingtime;
 
     private boolean availability;
+
+    private String picture;
+
+    public String getPicture() {
+        return picture;
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 
     public Pizza() {
     }

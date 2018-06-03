@@ -45,13 +45,14 @@ CREATE SEQUENCE pizza_sequence;
 CREATE TABLE ph.pizza
 (
   id            BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('pizza_sequence'),
-  name          VARCHAR(50),
-  description   VARCHAR(1000),
+  name          VARCHAR(500),
+  description   VARCHAR(10000),
   weight        INT,
   calories      INT,
   preparingtime VARCHAR(50),
   price         INT,
-  availability  BOOLEAN
+  availability  BOOLEAN,
+  picture varchar(1000)
 );
 
 DROP SEQUENCE IF EXISTS orderpizza_sequence CASCADE;

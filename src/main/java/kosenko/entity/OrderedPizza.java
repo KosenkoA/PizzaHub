@@ -1,6 +1,7 @@
 package kosenko.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Entity
 @Table(name = "orderpizza", schema = "ph")
