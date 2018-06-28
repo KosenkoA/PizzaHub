@@ -26,16 +26,16 @@ public class Order implements Serializable {
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id")
-    private List<OrderedPizza> orderedPizzas;
+    private List<OrderedProduct> orderedProducts;
 
     public Order() {
     }
 
-    public Order(@Past Timestamp time, User user, boolean closed, List<OrderedPizza> orderedPizzas) {
+    public Order(@Past Timestamp time, User user, boolean closed, List<OrderedProduct> orderedProducts) {
         this.time = time;
         this.user = user;
         this.closed = closed;
-        this.orderedPizzas = orderedPizzas;
+        this.orderedProducts = orderedProducts;
     }
 
     public long getId() {
@@ -63,11 +63,11 @@ public class Order implements Serializable {
         this.user = user;
     }
 
-    public List<OrderedPizza> getOrderedPizzas() {
-        return orderedPizzas;
+    public List<OrderedProduct> getOrderedProducts() {
+        return orderedProducts;
     }
 
-    public void setOrderedPizzas(List<OrderedPizza> orderedPizzas) {
-        this.orderedPizzas = orderedPizzas;
+    public void setOrderedProducts(List<OrderedProduct> orderedProducts) {
+        this.orderedProducts = orderedProducts;
     }
 }

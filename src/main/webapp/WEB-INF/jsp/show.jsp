@@ -26,7 +26,7 @@
             <th>description</th>
             <th>picture</th>
         </tr>
-        <c:forEach items="${pizza}" var="pizz">
+        <c:forEach items="${product}" var="pizz">
             <div class="card-deck">
                 <tr>
                     <td>${pizz.id}</td>

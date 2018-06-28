@@ -40,11 +40,11 @@ CREATE TABLE ph.order
   REFERENCES ph.user (id)
 );
 
-DROP SEQUENCE IF EXISTS pizza_sequence CASCADE;
-CREATE SEQUENCE pizza_sequence;
-CREATE TABLE ph.pizza
+DROP SEQUENCE IF EXISTS product_sequence CASCADE;
+CREATE SEQUENCE product_sequence;
+CREATE TABLE ph.product
 (
-  id            BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('pizza_sequence'),
+  id            BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('product_sequence'),
   name          VARCHAR(500),
   description   VARCHAR(10000),
   weight        INT,
@@ -55,16 +55,16 @@ CREATE TABLE ph.pizza
   picture varchar(1000)
 );
 
-DROP SEQUENCE IF EXISTS orderpizza_sequence CASCADE;
-CREATE SEQUENCE orderpizza_sequence;
-CREATE TABLE ph.orderpizza
+DROP SEQUENCE IF EXISTS orderproduct_sequence CASCADE;
+CREATE SEQUENCE orderproduct_sequence;
+CREATE TABLE ph.orderproduct
 (
-  id        BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('orderpizza_sequence'),
-  pizza_id  BIGINT,
+  id         BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('orderproduct_sequence'),
+  product_id BIGINT,
   status_id BIGINT,
   order_id  BIGINT,
-  CONSTRAINT "pizza_id" FOREIGN KEY ("pizza_id")
-  REFERENCES ph.pizza (id),
+  CONSTRAINT "product_id" FOREIGN KEY ("product_id")
+  REFERENCES ph.product (id),
   CONSTRAINT "status_id" FOREIGN KEY ("status_id")
   REFERENCES ph.status (id),
   CONSTRAINT "order_id" FOREIGN KEY ("order_id")

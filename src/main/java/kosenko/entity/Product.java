@@ -7,8 +7,8 @@ import javax.validation.constraints.Size;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "pizza", schema = "ph")
-public class Pizza implements Serializable {
+@Table(name = "product", schema = "ph")
+public class Product implements Serializable {
     @Id
     @SequenceGenerator(name = "user-sequence_generator", sequenceName = "user_sequence")
     @GeneratedValue(generator = "user-sequence_generator", strategy = GenerationType.IDENTITY)
@@ -41,10 +41,10 @@ public class Pizza implements Serializable {
         this.picture = picture;
     }
 
-    public Pizza() {
+    public Product() {
     }
 
-    public Pizza(@Size(min = 3, max = 500) String name, @Size(min = 3, max = 500) String description, int weight, @Max(5000) @Min(0) int calories, @Min(0) String preparingtime, boolean availability) {
+    public Product(@Size(min = 3, max = 500) String name, @Size(min = 3, max = 500) String description, int weight, @Max(5000) @Min(0) int calories, @Min(0) String preparingtime, boolean availability) {
         this.name = name;
         this.description = description;
         this.weight = weight;

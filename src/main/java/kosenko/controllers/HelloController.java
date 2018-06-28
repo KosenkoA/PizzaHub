@@ -2,8 +2,8 @@ package kosenko.controllers;
 
 import kosenko.controllers.util.FuncClass;
 import kosenko.controllers.util.ViewName;
-import kosenko.entity.Pizza;
-import kosenko.service.interfaces.PizzaService;
+import kosenko.entity.Product;
+import kosenko.service.interfaces.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -11,13 +11,12 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Controller
 public class HelloController {
     @Autowired
-    private PizzaService pizzaService;
+    private ProductService productService;
 
 /*
     //@GetMapping(value = "/hello")
@@ -32,29 +31,29 @@ public class HelloController {
     @RequestMapping(value = "hello", method = RequestMethod.GET)
     @ResponseStatus(HttpStatus.OK)
     public ModelAndView hello() {
-        List<Pizza> allPizzas;
-        allPizzas=pizzaService.findAllAvailable().stream().collect(Collectors.toList());
+        List<Product> allProducts;
+        allProducts = productService.findAllAvailable().stream().collect(Collectors.toList());
 
         ModelAndView modelAndView=new ModelAndView();
-        modelAndView.addObject("pizzas",allPizzas);
+        modelAndView.addObject("products", allProducts);
         modelAndView.setViewName("hello");
         return modelAndView;
     }
 
     @RequestMapping(value = "/hello/show/{id}",method = RequestMethod.GET)
-    public ModelAndView getPizzaById(@PathVariable("id") long id){
-        //Optional<Pizza> pizza=this.pizzaService.findById(id);
+    public ModelAndView getProductById(@PathVariable("id") long id) {
+        //Optional<Product> product=this.productService.findById(id);
 
-        List <Pizza> pizza = FuncClass.toList(this.pizzaService.findById(id));
+        List<Product> product = FuncClass.toList(this.productService.findById(id));
 
 
         ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("pizza",pizza);
+        modelAndView.addObject("product", product);
         modelAndView.setViewName("show");//We are searching for "show.jsp" file and rendering information with this file
         return modelAndView;
 
 
-        //return this.pizzaService.findById(id);
+        //return this.productService.findById(id);
     }
 
     @RequestMapping(value = "test")
@@ -72,6 +71,6 @@ public class HelloController {
     @GetMapping(value = "/layoutgrid")//Whole method is complete bullshit
     public ModelAndView layoutgrid() {
         return new ModelAndView(ViewName.MENU, "menuItems",
-                pizzaService.findAllAvailable());
+                productService.findAllAvailable());
     }
 }

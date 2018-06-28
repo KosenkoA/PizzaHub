@@ -11,11 +11,13 @@ INSERT INTO ph.user (email, password, name, role_id) VALUES ('somerandomemail@gm
 INSERT INTO ph.userrole (user_id, role_id) VALUES (1, 1);
 INSERT INTO ph.userrole (user_id, role_id) VALUES (2, 2);
 
-INSERT INTO ph.pizza (name, description, weight, calories, preparingtime, price, availability,picture)
-VALUES ('Cheese Pizza', 'Classic cheese pizza', 123, 123, 123, 123, TRUE,'/images/cheese-pizza.jpg');
-INSERT INTO ph.pizza (name, description, weight, calories, preparingtime, price, availability,picture) VALUES
-  ('New York Special Pizza', 'Pepperoni, sausage, meatballs, green peppers, mushrooms, red onions.', 123, 123, 123, 123,
-   TRUE,'/images/cheese-pizza.jpg');
-INSERT INTO ph.pizza (name, description, weight, calories, preparingtime, price, availability,picture) VALUES
-  ('New York Special Pizza 2', 'Pepperoni, sausage, meatballs, green peppers, mushrooms, red onions and some other stuff.', 123, 123, 123, 123,
-   TRUE,'/images/cheese-pizza.jpg');
+INSERT INTO ph.product (name, description, weight, calories, preparingtime, price, availability, picture)
+VALUES ('Cheese Product', 'Classic cheese product', 123, 123, 123, 123, TRUE, '/images/cheese-product.jpg');
+INSERT INTO ph.product (name, description, weight, calories, preparingtime, price, availability, picture) VALUES
+  ('New York Special Product', 'Pepperoni, sausage, meatballs, green peppers, mushrooms, red onions.', 123, 123, 123,
+   123,
+   TRUE, '/images/cheese-product.jpg');
+INSERT INTO ph.product (name, description, weight, calories, preparingtime, price, availability, picture) VALUES
+  ('New York Special Product 2',
+   'Pepperoni, sausage, meatballs, green peppers, mushrooms, red onions and some other stuff.', 123, 123, 123, 123,
+   TRUE, '/images/cheese-product.jpg');
