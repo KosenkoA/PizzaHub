@@ -61,8 +61,9 @@ CREATE TABLE ph.orderproduct
 (
   id         BIGINT NOT NULL PRIMARY KEY DEFAULT nextval('orderproduct_sequence'),
   product_id BIGINT,
-  status_id BIGINT,
-  order_id  BIGINT,
+  quantity   INT,
+  status_id  BIGINT,
+  order_id   BIGINT,
   CONSTRAINT "product_id" FOREIGN KEY ("product_id")
   REFERENCES ph.product (id),
   CONSTRAINT "status_id" FOREIGN KEY ("status_id")
