@@ -1,9 +1,18 @@
 package kosenko.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 import javax.validation.constraints.Size;
 import java.io.Serializable;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@EqualsAndHashCode
 @Entity
 @Table(name = "role", schema = "ph")
 public class Role implements Serializable {
@@ -16,22 +25,6 @@ public class Role implements Serializable {
     private String name;
 
     public Role(@Size(min = 2, max = 50) String name) {
-        this.name = name;
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
         this.name = name;
     }
 }

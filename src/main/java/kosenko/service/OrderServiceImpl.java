@@ -60,9 +60,10 @@ public class OrderServiceImpl implements OrderService {
     @Override
     public void onSubmitOrder(Map<Product, Integer> orderMap, User user, Long orderId) {
         Optional<Order> order = findByUserAndIdAndClosedFalse(user, orderId);
-        if (order.isPresent()) {
+        /*if (order.isPresent()) {
             order.getOrderedProducts().addAll
         }
+        */
     }
 
     @Override

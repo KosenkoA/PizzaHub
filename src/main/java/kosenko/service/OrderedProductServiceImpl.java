@@ -33,7 +33,7 @@ public class OrderedProductServiceImpl implements OrderedProductService {
     public Optional<OrderedProduct> delete(long id) {
         Optional<OrderedProduct> deletedOrderedProduct = orderedProductRepository.findById(id);
         if (deletedOrderedProduct.isPresent()) {
-            orderedProductRepository.delete(deletedOrderedProduct);
+            orderedProductRepository.deleteById(id);
         }
         return deletedOrderedProduct;
     }
