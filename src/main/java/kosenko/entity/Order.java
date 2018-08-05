@@ -37,5 +37,4 @@ public class Order implements Serializable {
     @JoinColumn(name = "order_id")
     private List<OrderedProduct> orderedProducts;
 
-
 }
