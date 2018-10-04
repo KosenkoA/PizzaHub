@@ -38,7 +38,7 @@ Administrator abilities:
 
 
 
-Prerequisites
+Requirements
 - JDK V.8;
 - Spring Boot v.2.0;
 - HTML v.5;
